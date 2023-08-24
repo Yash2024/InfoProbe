@@ -14,6 +14,8 @@ function App() {
   const questionRef = useRef();
   const [answer,setanswer]=useState("");
   const key= process.env.REACT_APP_OPENAI_API_KEY;
+
+  const [load,setload] = useState(false);
   
   async function generateAnswer(e) {
     // Implement your code to generate an answer here
@@ -29,6 +31,7 @@ function App() {
       url
     );
     console.log(url);
+    setload(true);
     const data = await loader.load();
     // const data = {};
     
@@ -66,6 +69,7 @@ function App() {
       });
 
       await setanswer(result.text);
+      setload(false);
       console.log(result.text);
 
 
@@ -92,8 +96,8 @@ function App() {
           <input type="text" id="question" name="question" ref={questionRef} placeholder="What is...?" required/>
           <button id="submitButton" type="submit" >Submit</button>
         </form> 
-
-        {answer === "" ? <></>:<div className="result">
+        {load ?<><br/><br/><div className="loader"></div></>:<></>}
+        {answer === "" || load ? <></>:<div className="result">
         <h2>Result:</h2>
         <p className='resans'><strong>Answer: {answer}</strong></p>
         </div>}
