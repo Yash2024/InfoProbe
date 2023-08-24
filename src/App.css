@@ -57,6 +57,13 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.descrip {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 5px solid #64b5f6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .title {
   text-align: center;
   color: #007bff;
@@ -106,19 +113,56 @@ body {
   /* Adjust styles for screens with a width of 600px or less */
   body {
     font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    /* height: 260vh; */
+    background-size: 1200px 2000px;
   }
 
   .container {
-    max-width: 100%; /* Make the container span the full width of the screen */
     padding: 10px; /* Reduce padding for better use of space on small screens */
+    margin-left: 560px;
+    margin-top: 500px;
+    width: 0px;
+    height: 800px;
+    margin-right: 50px;
   }
 
-  input[type="text"] {
-    width: 100%; /* Make the input field span the full width of the container */
-    margin-bottom: 10px; /* Reduce margin for better use of space */
+  .descrip {
+    font-size: 25px;
   }
 
-  button {
-    width: 100%; /* Make the button span the full width of the container */
+  .form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .form input[type="url"],
+  .form input[type="text"] {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 26px;
+    height: 50px;
+  }
+
+  .form button {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 280px;
+  }
+
+  .result {
+    margin-top: 150px;
+    font-size: 35px;
   }
 }

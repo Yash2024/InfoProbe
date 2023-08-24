@@ -78,6 +78,13 @@ function App() {
     <div className="App">
       <div className="container">
       <h1 className="title">InfoProbe</h1>
+      <div className='descrip'>Welcome to InfoProbe , an advanced Question-Answering (QA) website! With our cutting-edge technology, you can effortlessly 
+        extract,answers from web content. Simply provide us with the URL of the webpage you're interested in and the question you have in 
+        mind. Our powerful system will analyze the content and generate accurate responses. Whether you're looking for information, 
+        insights, or quick answers, our QA service makes it easier than ever. Experience the convenience of intelligent searching 
+        and seamless information retrieval at your fingertips. Try it now and get the answers you need in no time!</div>
+        <br/>
+        <br/>
         <form className="form" onSubmit={generateAnswer}>
           <label htmlFor="url">Enter a Website URL:</label>
           <input type="url" id="url" name="url" ref={urlRef} placeholder="https://example.com" required/>
@@ -88,7 +95,7 @@ function App() {
 
         {answer === "" ? <></>:<div className="result">
         <h2>Result:</h2>
-        <p><strong>Answer: {answer}</strong></p>
+        <p className='resans'><strong>Answer: {answer}</strong></p>
         </div>}
         </div>
       
