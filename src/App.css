@@ -122,7 +122,7 @@ body {
   }
   .container {
     padding: 10px; /* Reduce padding for better use of space on small screens */
-    margin-left: 600px;
+    margin-left: 580px;
     margin-top: 500px;
     width: 0px;
     height: 840px;
